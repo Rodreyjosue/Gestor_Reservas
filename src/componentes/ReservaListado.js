@@ -40,18 +40,18 @@ function ReservaListado() {
   };
 
   const crearReserva = () => {
-    setReservaEdicion(null); // Limpiar datos previos si es una nueva reserva.
-    setMostrarFormulario(true); // Ocultar listado y mostrar formulario.
+    setReservaEdicion(null); 
+    setMostrarFormulario(true); 
   };
 
   const editarReserva = (reserva) => {
-    setReservaEdicion(reserva); // Pasar reserva seleccionada al formulario.
-    setMostrarFormulario(true); // Ocultar listado y mostrar formulario.
+    setReservaEdicion(reserva); 
+    setMostrarFormulario(true); 
   };
 
   const cerrarFormulario = () => {
-    setMostrarFormulario(false); // Ocultar formulario y mostrar listado.
-    cargarReservas(); // Recargar listado al finalizar acción.
+    setMostrarFormulario(false); 
+    cargarReservas(); 
   };
 
   return (
