@@ -35,7 +35,7 @@ export const BACKEND_URL = 'http://localhost:8080/api';
 
 Si tu backend se encuentra en una URL diferente, actualiza el valor de BACKEND_URL de acuerdo con tu configuración.
 
-###4. Ejecutar la aplicación
+### 4. Ejecutar la aplicación
 Una vez que las dependencias estén instaladas y la configuración esté lista, puedes iniciar la aplicación frontend con el siguiente comando:
 
 npm start
