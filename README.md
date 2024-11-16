@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Frontend de Reserva de Habitaciones
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este documento explica los pasos necesarios para ejecutar y utilizar el frontend del sistema de reservas de habitaciones.
 
-## Available Scripts
+## Requisitos previos
 
-In the project directory, you can run:
+Antes de seguir los pasos de instalación, asegúrate de tener lo siguiente instalado en tu máquina:
 
-### `npm start`
+- **Node.js** (versión 16 o superior)
+- **npm** (gestor de paquetes de Node.js)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Si no tienes Node.js instalado, puedes obtenerlo desde [aquí](https://nodejs.org/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pasos para ejecutar el frontend
 
-### `npm test`
+### 1. Clonar el repositorio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Primero, clona este repositorio en tu máquina local:
 
-### `npm run build`
+git clone https://github.com/tu-usuario/reservas-hotel-frontend.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd reservas-hotel-frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Instalar las dependencias
+A continuación, instala las dependencias necesarias para ejecutar la aplicación frontend. Usa el siguiente comando dentro del directorio del proyecto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+Este comando descargará e instalará todas las bibliotecas necesarias definidas en el archivo package.json.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Configurar la URL del backend
+Asegúrate de que la URL del backend esté configurada correctamente. Abre el archivo src/config.js y asegúrate de que el backend esté apuntando a la URL correcta:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+export const BACKEND_URL = 'http://localhost:8080/api';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Si tu backend se encuentra en una URL diferente, actualiza el valor de BACKEND_URL de acuerdo con tu configuración.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+###4. Ejecutar la aplicación
+Una vez que las dependencias estén instaladas y la configuración esté lista, puedes iniciar la aplicación frontend con el siguiente comando:
 
-## Learn More
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esto iniciará el servidor de desarrollo y la aplicación estará disponible en http://localhost:3000.
