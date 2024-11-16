@@ -1,6 +1,5 @@
 package com.bjrr.gestion_reservas.servicio;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +21,12 @@ public class ReservaServicio {
         return reservaRepositorio.findAll();
     }
 
-    public Reserva actualizarReserva(Long id, LocalDate fechaInicio, LocalDate fechaFin) {
-        Reserva reserva = reservaRepositorio.findById(id)
+    public Reserva actualizarReserva(Long id, Reserva reserva) {
+        Reserva reservaActualizar = reservaRepositorio.findById(id)
             .orElseThrow(() -> new RuntimeException("Reserva no encontrada"));
-        reserva.setFechaInicio(fechaInicio);
-        reserva.setFechaFin(fechaFin);
-        return reservaRepositorio.save(reserva);
+            reservaActualizar.setFechaInicio(reserva.getFechaInicio());
+            reservaActualizar.setFechaFin(reserva.getFechaFin());
+        return reservaRepositorio.save(reservaActualizar);
     }
 
     public void cancelarReserva(Long id) {

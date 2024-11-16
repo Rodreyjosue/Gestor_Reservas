@@ -1,6 +1,5 @@
 package com.bjrr.gestion_reservas.controlador;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bjrr.gestion_reservas.modelo.Reserva;
@@ -37,8 +35,8 @@ public class ReservaControlador {
     }
 
     @PutMapping("/{id}")
-    public Reserva actualizarReserva(@PathVariable Long id, @RequestParam LocalDate fechaInicio, @RequestParam LocalDate fechaFin) {
-        return reservaServicio.actualizarReserva(id, fechaInicio, fechaFin);
+    public Reserva actualizarReserva(@PathVariable Long id, @RequestBody Reserva reserva) {
+    return reservaServicio.actualizarReserva(id, reserva);
     }
 
     @DeleteMapping("/{id}")
