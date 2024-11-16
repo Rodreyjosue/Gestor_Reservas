@@ -16,7 +16,6 @@ Antes de seguir los pasos de instalación, asegúrate de tener lo siguiente inst
 
 Primero, clona este repositorio en tu máquina local:
 
-```bash
 git clone https://github.com/tu-usuario/reservas-hotel.git
 cd reservas-hotel
 
