@@ -25,8 +25,11 @@ El backend está configurado para usar H2 como base de datos en memoria por defe
 ejemplo:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/nombre_de_la_base_de_datos
+
 spring.datasource.username=usuario
+
 spring.datasource.password=contraseña
+
 spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
 ### 3. Ejecutar la aplicación
